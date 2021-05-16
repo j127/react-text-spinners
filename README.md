@@ -28,7 +28,7 @@ import Spinner from "react-text-spinners";
 
 export default function Example() {
     const [isLoading, setIsLoading] = useState(true);
-    const [message, setMessage] = useState(null);
+    const [message, setMessage] = useState("");
 
     useEffect(() => {
         // this simulates the time it takes to make a web request
