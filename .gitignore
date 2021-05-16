@@ -2,6 +2,9 @@
 .envrc
 dist/
 build/
+.cache/
+.netlify/
+*.bak
 
 example_removed/
 

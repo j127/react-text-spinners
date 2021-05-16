@@ -1,3 +1,6 @@
 example/
 .netlify/
 *.bak
+.cache/
+.git/
+build/
