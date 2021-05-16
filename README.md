@@ -44,6 +44,12 @@ export default function Example() {
 }
 ```
 
+You can customize the output with additional props:
+
+```tsx
+<Spinner theme="dots2" color="teal" size="5rem" title="Alternate hover text" />
+```
+
 ## License
 
 MIT © [j127](https://github.com/j127)
