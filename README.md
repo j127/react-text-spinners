@@ -1,5 +1,7 @@
 # react-text-spinners
 
+**WORK IN PROGRESS**
+
 This package wraps up [text-spinners](https://github.com/maxbeier/text-spinners) as an installable React component. View the examples [here](https://react-text-spinners.codeselfstudy.com/).
 
 [![NPM](https://img.shields.io/npm/v/react-text-spinners.svg)](https://www.npmjs.com/package/react-text-spinners)
