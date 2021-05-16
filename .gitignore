@@ -3,6 +3,8 @@
 dist/
 build/
 
+example_removed/
+
 .rpt2_cache
 .DS_Store
 .env
