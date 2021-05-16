@@ -1,8 +1,8 @@
 # react-text-spinners
 
-> text-spinners as a React component
+This package wraps up [text-spinners](https://github.com/maxbeier/text-spinners) as an installable React component. View the examples [here](https://react-text-spinners.codeselfstudy.com/).
 
-[![NPM](https://img.shields.io/npm/v/react-text-spinners.svg)](https://www.npmjs.com/package/react-text-spinners) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-text-spinners.svg)](https://www.npmjs.com/package/react-text-spinners)
 
 ## Install
 
@@ -10,18 +10,37 @@
 npm install --save react-text-spinners
 ```
 
+To run the examples, clone this repo and run the following commands in your terminal:
+
+```text
+$ npm install
+$ npm run examples
+```
+
+Then open `http://localhost:1234/` in a browser.
+
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React, { useEffect, useState } from "react";
 
-import MyComponent from 'react-text-spinners'
-import 'react-text-spinners/dist/index.css'
+import Spinner from "react-text-spinners";
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+export default function Example() {
+    const [isLoading, setIsLoading] = useState(true);
+    const [message, setMessage] = useState(null);
+
+    useEffect(() => {
+        // this simulates the time it takes to make a web request
+        setTimeout(() => {
+            setMessage("hello world");
+            setIsLoading(false);
+        }, 1000);
+    }, []);
+
+    return (
+        <div>{isLoading ? <Spinner theme="dots2" /> : <p>{message}</p>}</div>
+    );
 }
 ```
 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>React Text Spinners</title>
+        <link rel="stylesheet" href="./main.scss" />
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-37305501-3"
+        ></script>
+        <script>
+            if (!(navigator.doNotTrack == "1" || window.doNotTrack == "1")) {
+                window.dataLayer = window.dataLayer || [];
+                function gtag() {
+                    window.dataLayer && window.dataLayer.push(arguments);
+                }
+                gtag("js", new Date());
+
+                gtag("config", "UA-37305501-3", {
+                    anonymize_ip: true,
+                    send_page_view: false,
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <section class="section hero">
+            <div class="hero-body box">
+                <h1 class="title is-1">React Text Spinners</h1>
+
+                <p class="subtitle">Examples of all the spinners</p>
+                <p>
+                    Find this npm package at
+                    <a href="https://github.com/j127/react-text-spinners"
+                        >j127/react-text-spinners</a
+                    >. You can customize the colors and size with props.
+                </p>
+            </div>
+
+            <div id="app"></div>
+        </section>
+
+        <script src="./index.tsx"></script>
+    </body>
+</html>
