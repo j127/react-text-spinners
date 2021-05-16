@@ -4,7 +4,7 @@
     "description": "text-spinners as a React component",
     "author": "j127",
     "license": "MIT",
-    "repository": "j127/react-text-spinners",
+    "repository": "https://github.com/j127/react-text-spinners",
     "main": "dist/index.js",
     "module": "dist/index.modern.js",
     "source": "src/index.tsx",
@@ -22,8 +22,10 @@
         "test:watch": "react-scripts test --env=jsdom",
         "examples:serve": "parcel serve example/index.html",
         "examples:build": "parcel build --out-dir=build example/index.html",
-        "examples:deploy": "npm run examples:build && netlify deploy --dir=build --prod"
+        "examples:deploy": "npm run examples:build && netlify deploy --dir=build --prod",
+        "publish:npm": "rm -rf dist && npm run build"
     },
+    "private": false,
     "peerDependencies": {
         "react": "^16.0.0"
     },
