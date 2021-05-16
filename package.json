@@ -12,8 +12,8 @@
         "node": ">=10"
     },
     "scripts": {
-        "build": "microbundle-crl --no-compress --format modern,cjs",
-        "start": "microbundle-crl watch --no-compress --format modern,cjs",
+        "build": "microbundle-crl --no-compress --format modern,cjs --css-modules-false",
+        "start": "microbundle-crl watch --no-compress --format modern,cjs --css-modules-false",
         "prepare": "run-s build",
         "test": "run-s test:unit test:lint test:build",
         "test:build": "run-s build",
@@ -23,12 +23,19 @@
         "examples:serve": "parcel serve example/index.html",
         "examples:build": "parcel build --out-dir=build example/index.html",
         "examples:deploy": "npm run examples:build && netlify deploy --dir=build --prod",
-        "publish:npm": "rm -rf dist && npm run build"
+        "publish:npm": "rm -rf dist && npm run build && npm publish"
     },
     "private": false,
     "peerDependencies": {
         "react": "^16.0.0"
     },
+    "keywords": [
+        "react",
+        "spinners",
+        "css",
+        "text spinners",
+        "typescript"
+    ],
     "devDependencies": {
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.5.0",
