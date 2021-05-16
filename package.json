@@ -5,21 +5,12 @@
     "author": "j127",
     "license": "MIT",
     "repository": "https://github.com/j127/react-text-spinners",
-    "main": "dist/index.js",
-    "module": "dist/index.modern.js",
-    "source": "src/index.tsx",
     "engines": {
         "node": ">=10"
     },
     "scripts": {
-        "build": "microbundle-crl --no-compress --format modern,cjs --css-modules-false",
-        "start": "microbundle-crl watch --no-compress --format modern,cjs --css-modules-false",
-        "prepare": "run-s build",
-        "test": "run-s test:unit test:lint test:build",
-        "test:build": "run-s build",
-        "test:lint": "eslint .",
-        "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
-        "test:watch": "react-scripts test --env=jsdom",
+        "build": "rollup -c",
+        "start": "rollup -c -w",
         "examples:serve": "parcel serve example/index.html",
         "examples:build": "parcel build --out-dir=build example/index.html",
         "examples:deploy": "npm run examples:build && netlify deploy --dir=build --prod",
@@ -27,7 +18,8 @@
     },
     "private": false,
     "peerDependencies": {
-        "react": "^16.0.0"
+        "react": "^16.8.0",
+        "react-dom": "^16.8.0"
     },
     "keywords": [
         "react",
@@ -37,31 +29,26 @@
         "typescript"
     ],
     "devDependencies": {
-        "@testing-library/jest-dom": "^4.2.4",
-        "@testing-library/react": "^9.5.0",
-        "@testing-library/user-event": "^7.2.1",
-        "@types/jest": "^25.1.4",
-        "@types/node": "^12.12.38",
-        "@types/react": "^16.9.27",
-        "@types/react-dom": "^16.9.7",
-        "babel-eslint": "^10.0.3",
+        "@types/react": "^17.0.5",
+        "@types/react-dom": "^17.0.5",
+        "babel-core": "^6.26.3",
+        "babel-runtime": "^6.26.0",
         "bulma": "^0.9.2",
-        "cross-env": "^7.0.2",
-        "gh-pages": "^2.2.0",
         "lodash": "^4.17.21",
-        "microbundle-crl": "^0.13.10",
-        "npm-run-all": "^4.1.5",
         "parcel-bundler": "^1.12.5",
         "prettier": "^2.0.4",
-        "react": "^16.13.1",
-        "react-dom": "^16.13.1",
-        "react-scripts": "^3.4.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "rollup": "^2.48.0",
+        "rollup-plugin-sass": "^1.2.2",
+        "rollup-plugin-typescript2": "^0.30.0",
         "sass": "^1.32.13",
-        "typescript": "^3.7.5"
+        "typescript": "^3.9.9"
     },
     "files": [
         "dist"
     ],
+    "main": "dist/index.js",
     "dependencies": {
         "text-spinners": "^1.0.5"
     }
