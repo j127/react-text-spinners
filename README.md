@@ -4,6 +4,8 @@ This package wraps up [text-spinners](https://github.com/maxbeier/text-spinners)
 
 [![NPM](https://img.shields.io/npm/v/react-text-spinners.svg)](https://www.npmjs.com/package/react-text-spinners)
 
+Version 2 uses a peer dependency of React 17 instead of React 16.
+
 ## Install
 
 ```bash
