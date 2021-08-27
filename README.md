@@ -10,15 +10,6 @@ This package wraps up [text-spinners](https://github.com/maxbeier/text-spinners)
 npm install --save react-text-spinners
 ```
 
-To run the examples, clone this repo and run the following commands in your terminal:
-
-```text
-$ npm install
-$ npm run examples:serve
-```
-
-Then open `http://localhost:1234/` in a browser.
-
 ## Usage
 
 ```tsx
@@ -49,6 +40,17 @@ You can customize the output with additional props:
 ```tsx
 <Spinner theme="dots2" color="teal" size="5rem" title="Alternate hover text" />
 ```
+
+## Examples
+
+To run [the examples](https://react-text-spinners.codeselfstudy.com/) locally, clone this repo and run the following commands in your terminal:
+
+```text
+$ npm install
+$ npm run examples:serve
+```
+
+Then open `http://localhost:1234/` in a browser.
 
 ## License
 
