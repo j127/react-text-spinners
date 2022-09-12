@@ -6,6 +6,8 @@ This package wraps up [text-spinners](https://github.com/maxbeier/text-spinners)
 
 Version 2 uses a peer dependency of React 17 instead of React 16.
 
+Version 3 uses a peer dependency of React 18 instead of React 17.
+
 ## Install
 
 ```bash
@@ -15,7 +17,7 @@ npm install --save react-text-spinners
 ## Usage
 
 ```tsx
-import React, { useEffect, useState } from "react";
+import React, { value useEffect, value useState } from "react";
 
 import Spinner from "react-text-spinners";
 
